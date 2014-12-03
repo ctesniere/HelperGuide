@@ -2,5 +2,5 @@
 
 Java
 
-[Styleguide](blob/master/java/Styleguide.md)  
-[Tools](blob/master/java/Tools.md)
+[Styleguide](https://github.com/ctesniere/HelperGuide/blob/master/java/Styleguide.md)  
+[Tools](https://github.com/ctesniere/HelperGuide/blob/master/java/Tools.md)
