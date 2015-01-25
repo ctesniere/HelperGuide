@@ -8,6 +8,56 @@
 Moteur de template pour document ou mail
 
 
+## Git
+
+### Installation
+
+Avec Homebrew, l'installation de Git est très simple et simplifie les mises à jour :
+
+```bash
+$ brew update
+$ brew install git
+```
+
+Pour s'assurer que tous fonctionnent correctement, utiliser la commande `$ brew doctor`.
+Si vous avez cette erreur `Warning: /usr/bin occurs before /usr/local/bin`, executer cette commande :
+
+```bash
+$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+```
+
+Enfin, assurer vous que Git est correctement installé grâce à `git --version`
+
+### Configuration
+
+```bash
+$ git config --global user.name "Full Name"
+$ git config --global user.email "Email"
+$ git config --global color.ui true
+```
+
+### Votre éditeur
+
+Vous pouvez configurer l'éditeur de texte par défaut qui sera utilisé par Git si vous avez besoin d'écrire un message ou lors d'un rebase.
+
+```bash
+$ git config --global core.editor "subl -n -w"
+```
+
+### alias
+
+Les alias basic 
+
+```bash
+st = status
+br = branch -vv -a
+branch = branch -vv
+co = checkout
+cob = checkout -b
+ci = commit
+```
+
+
 
 ## Styleguide Java
 
