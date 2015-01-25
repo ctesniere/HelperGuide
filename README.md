@@ -1,7 +1,12 @@
-# Guide Perso
+# Trick and tips
+
+## Summary
+
+- Java tools
+- Git
+
 
 ## Java Tools
-
 ### Template
 
 * [Velocity](http://velocity.apache.org/engine/devel/developer-guide.html)  
@@ -9,7 +14,6 @@ Moteur de template pour document ou mail
 
 
 ## Git
-
 ### Installation
 
 Avec Homebrew, l'installation de Git est très simple et simplifie les mises à jour :
@@ -60,7 +64,6 @@ ci = commit
 
 
 ## Styleguide Java
-
 ### Terminologie et définition
 
 * PascalCase : Chaque premier mot commence par un UpperCase. Ex: FooBar
@@ -69,11 +72,8 @@ ci = commit
 * AllLowerCase : Alphabet en minuscule. Ex: foo.bar ou foo_bar
 
 ### Class
-
 ### Methode
-
 ### Field
-
 ### Enum
 
 * Le nom d'une enum doit-être écrit en PascalCase
@@ -117,7 +117,6 @@ class ExempleEnum {
 Éviter d'utiliser `Arrays.asList(...)` car possède des fluites mémoires.
 
 ### Intellij
-
 #### Saut de ligne
 
 Afin d'ajouter un saut de ligne à vos fichier automatiquement :  
