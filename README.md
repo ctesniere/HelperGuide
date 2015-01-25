@@ -1,9 +1,10 @@
-# Trick and tips
+# Trick and Tips
 
 ## Summary
 
 - Java tools
 - Git
+- Styleguide Java
 
 
 ## Java Tools
@@ -48,7 +49,7 @@ Vous pouvez configurer l'éditeur de texte par défaut qui sera utilisé par Git
 $ git config --global core.editor "subl -n -w"
 ```
 
-### alias
+### Alias
 
 Les alias basic 
 
@@ -61,7 +62,30 @@ cob = checkout -b
 ci = commit
 ```
 
+### Ajout de fichier
 
+`git add .` - Ajout tous les fichiers unstaged  
+`git add -p` - Choisir les bouts de code à staged
+`git reset HEAD file` - Unstaged le fichier
+
+### Réécrire l'historique
+
+#### Fixup and Autosquash
+
+Si un oublie se presente dans un précédente commit, par exemple 4c8f450, exécutez la commande suivante après que vous avez modifié le problème :
+
+`git commit --fixup=4c8f450`
+
+Un alias très utile :
+
+```bash
+[alias]
+  fixup = "!sh -c '(git diff-files --quiet || \
+    (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && \
+    COMMIT=$(git rev-parse $1) && \
+    git commit --fixup=$COMMIT && \
+    git rebase -i --autosquash $COMMIT~1' -"
+```
 
 ## Styleguide Java
 ### Terminologie et définition
