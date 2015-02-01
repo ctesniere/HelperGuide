@@ -2,9 +2,24 @@
 
 ## Summary
 
-- Java tools
-- Git
-- Styleguide Java
+- [Java tools](#java-tools)
+  - [Template](#template)
+- [Git](#git)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Editor](#editor)
+  - [Alias](#alias)
+  - [Ajout de fichier](#ajout-de-fichier)
+  - [Rewriting history](#rewriting-history)
+    - [Fixup and Autosquash](#fixup-and-autosquash)
+  - [Best script for Git](#best-script-for-git)
+- [Styleguide Java](#styleguide-java)
+  - [Enum](#enum)
+  - [toString and get](#tostring-and-get)
+  - [Optimisation](#optimisation)
+  - [Intellij](#intellij)
+    - [Saut de ligne](#saut-de-ligne)
+    - [Import inutile](#import-inutile)
 
 
 ## Java Tools
@@ -41,7 +56,7 @@ $ git config --global user.email "Email"
 $ git config --global color.ui true
 ```
 
-### Votre éditeur
+### Editor
 
 Vous pouvez configurer l'éditeur de texte par défaut qui sera utilisé par Git si vous avez besoin d'écrire un message ou lors d'un rebase.
 
@@ -68,7 +83,7 @@ ci = commit
 `git add -p` - Choisir les bouts de code à staged
 `git reset HEAD file` - Unstaged le fichier
 
-### Réécrire l'historique
+### Rewriting history
 
 #### Fixup and Autosquash
 
@@ -95,22 +110,12 @@ Github like contributions calendar on terminal.
 GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
 
 ## Styleguide Java
-### Terminologie et définition
-
-* PascalCase : Chaque premier mot commence par un UpperCase. Ex: FooBar
-* CamelCase : Première lettre utilisant une minuscule et chaque premier mot commence par une majuscule. Ex: fooBar
-* AllUpperCase : Alphabet en majuscule. Ex: FOO_BAR
-* AllLowerCase : Alphabet en minuscule. Ex: foo.bar ou foo_bar
-
-### Class
-### Methode
-### Field
 ### Enum
 
 * Le nom d'une enum doit-être écrit en PascalCase
 * Aucun `s` a la fin du nom d'un Enum
 
-### toString() != get()
+### toString and get
 
 Le toString doit être utilisé seulement dans le cas ou l'on souhaite avoir `(String) Enum`
 
