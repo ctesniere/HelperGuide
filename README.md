@@ -87,6 +87,13 @@ Un alias très utile :
     git rebase -i --autosquash $COMMIT~1' -"
 ```
 
+### Best script for Git
+
+* [k4rthik/git-cal](https://github.com/k4rthik/git-cal)  
+Github like contributions calendar on terminal.
+* [tj/git-extras](https://github.com/tj/git-extras)  
+GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+
 ## Styleguide Java
 ### Terminologie et définition
 
