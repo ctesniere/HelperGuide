@@ -102,12 +102,14 @@ Un alias très utile :
     git rebase -i --autosquash $COMMIT~1' -"
 ```
 
-### Best script for Git
+### Best tool or script for Git
 
 * [k4rthik/git-cal](https://github.com/k4rthik/git-cal)  
 Github like contributions calendar on terminal.
 * [tj/git-extras](https://github.com/tj/git-extras)  
 GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+* [tiimgreen/github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet)  
+A list of cool features of Git and GitHub.
 
 ## Styleguide Java
 ### Enum
