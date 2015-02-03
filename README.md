@@ -54,6 +54,7 @@ Enfin, assurer vous que Git est correctement installé grâce à `git --version`
 $ git config --global user.name "Full Name"
 $ git config --global user.email "Email"
 $ git config --global color.ui true
+$ git config --global core.pager cat
 ```
 
 ### Editor
