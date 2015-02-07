@@ -13,6 +13,7 @@
   - [Rewriting history](#rewriting-history)
     - [Fixup and Autosquash](#fixup-and-autosquash)
   - [Best script for Git](#best-script-for-git)
+- [OS X Preferences](#os-x-preferences)
 - [Styleguide Java](#styleguide-java)
   - [Enum](#enum)
   - [toString and get](#tostring-and-get)
@@ -111,6 +112,81 @@ Github like contributions calendar on terminal.
 GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
 * [tiimgreen/github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet)  
 A list of cool features of Git and GitHub.
+
+
+## OS X Preferences
+
+```bash
+# Disable sound effect when changing volume 
+defaults write -g com.apple.sound.beep.feedback -integer 0
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+
+###############################################################################
+# Finder ($ killall Dock)                                                     #
+###############################################################################
+
+# Show icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true && \
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true && \
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true && \
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show all filename extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show Path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Enable text copying from Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool YES
+
+# Show absolute path in finder's title bar. 
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+
+# Use current directory as default search scope in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+ 
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Disable automatic rearrangement of spaces based on most recent usage
+defaults write com.apple.dock mru-spaces -bool false
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: icnv, Nlmv, Flwv
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlmv"
+
+
+###############################################################################
+# Safari & WebKit                                                             #
+###############################################################################
+
+# Enable Safari’s debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+
+
+# from this source:
+# https://gist.github.com/benfrain/7434600
+```
 
 ## Styleguide Java
 ### Enum
