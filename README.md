@@ -112,6 +112,8 @@ Github like contributions calendar on terminal.
 GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
 * [tiimgreen/github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet)  
 A list of cool features of Git and GitHub.
+* [sickill/git-dude](https://github.com/sickill/git-dude)  
+git-dude is a simple git desktop notifier. It monitors git repositories in current directory for new commits/branches/tags and shows desktop notification if anything new arrived.
 
 
 ## OS X Preferences
