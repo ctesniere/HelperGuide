@@ -13,7 +13,9 @@
   - [Rewriting history](#rewriting-history)
     - [Fixup and Autosquash](#fixup-and-autosquash)
   - [Best script for Git](#best-script-for-git)
-- [OS X Preferences](#os-x-preferences)
+- [OS X](#os-x)
+  - [Preferences](#os-x-preferences)
+  - [Install](#install)
 - [Styleguide Java](#styleguide-java)
   - [Enum](#enum)
   - [toString and get](#tostring-and-get)
@@ -116,7 +118,9 @@ A list of cool features of Git and GitHub.
 git-dude is a simple git desktop notifier. It monitors git repositories in current directory for new commits/branches/tags and shows desktop notification if anything new arrived.
 
 
-## OS X Preferences
+## OS X
+
+### Preferences
 
 ```bash
 # Disable sound effect when changing volume 
@@ -188,6 +192,25 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # from this source:
 # https://gist.github.com/benfrain/7434600
+```
+
+## Install
+
+```bash
+# Homebrew (http://brew.sh/)
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew doctor
+```
+
+```bash
+# Node
+brew install node
+```
+
+```bash
+# Bonus
+npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
 ```
 
 ## Styleguide Java
