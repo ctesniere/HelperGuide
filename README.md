@@ -167,15 +167,33 @@ $ git config --global core.editor "subl -n -w"
 
 ### Alias
 
-Les alias basic 
-
 ```bash
-st = status
+# Les alias basic
+st = status -sb
 br = branch -vv -a
 branch = branch -vv
 co = checkout
 cob = checkout -b
 ci = commit
+fetchall = fetch --all --tag
+
+# Log
+tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
+lg = log --pretty=oneline --abbrev-commit
+who = shortlog -sne
+
+# Annuler le dernier commit
+undo = git reset --soft HEAD^
+
+# diff
+dic = diff --cached
+diffstat = diff --stat
+
+# Editer le dernier commit
+amend = commit --amend
+
+# Show url remote
+remoteurl = remote -v
 ```
 
 ### Ajout de fichier
