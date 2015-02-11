@@ -160,6 +160,8 @@ $ git config --global core.pager cat
 Vous pouvez configurer l'éditeur de texte par défaut qui sera utilisé par Git si vous avez besoin d'écrire un message ou lors d'un rebase.
 
 ```bash
+# Prerequisite : have Sublime Text 2
+$ sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin
 $ git config --global core.editor "subl -n -w"
 ```
 
