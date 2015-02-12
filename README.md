@@ -45,7 +45,7 @@ defaults write com.apple.screencapture type -string "png"
 
 
 ###############################################################################
-# Finder ($ killall Dock)                                                     #
+# Finder                                                                      #
 ###############################################################################
 
 # Show icons for hard drives, servers, and removable media on the desktop
@@ -104,6 +104,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 
 
+# /!\ For apply change
+$ killall Dock
+
 # from this source:
 # https://gist.github.com/benfrain/7434600
 ```
@@ -121,14 +124,33 @@ Install [brew-cask](https://github.com/caskroom/homebrew-cask)
 
 ```bash
 $ brew install caskroom/cask/brew-cask
+```
 
-$ brew cask install google-chrome
-$ brew cask install appcleaner
-$ brew cask install spotify
-$ brew cask install iterm2
-$ brew cask install spectacle
-$ brew cask install dash
-$ brew cask install sequel-pro
+Quick Look plugin
+
+```bash
+$ brew cask update
+
+# Inspect the contents of compressed archives
+$ brew cask install betterzipql
+
+# Syntax highlighting
+$ brew cask install qlcolorcode
+
+# QuickLook generator for Markdown files
+$ brew cask install qlmarkdown
+
+# A QuickLook plugin that lets you view plain text files without a file extension
+$ brew cask install qlstephen
+
+# Preview JSON files
+$ brew cask install quicklook-json
+
+# Display image size and resolution
+$ brew cask install qlimagesize
+
+# Preview the contents of a standard Apple installer package
+$ brew cask install suspicious-package
 ```
 
 ```bash
