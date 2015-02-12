@@ -112,9 +112,23 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ```bash
 # Homebrew (http://brew.sh/)
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew doctor
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew update
+$ brew doctor
+```
+
+Install [brew-cask](https://github.com/caskroom/homebrew-cask)
+
+```bash
+$ brew install caskroom/cask/brew-cask
+
+$ brew cask install google-chrome
+$ brew cask install appcleaner
+$ brew cask install spotify
+$ brew cask install iterm2
+$ brew cask install spectacle
+$ brew cask install dash
+$ brew cask install sequel-pro
 ```
 
 ```bash
