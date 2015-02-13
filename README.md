@@ -34,10 +34,10 @@
 
 ```bash
 # Disable sound effect when changing volume 
-defaults write -g com.apple.sound.beep.feedback -integer 0
+$ defaults write -g com.apple.sound.beep.feedback -integer 0
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
+$ defaults write com.apple.screencapture type -string "png"
 
 
 ###############################################################################
@@ -45,44 +45,44 @@ defaults write com.apple.screencapture type -string "png"
 ###############################################################################
 
 # Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true && \
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true && \
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true && \
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+$ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+$ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+$ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+$ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+$ defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Show all filename extensions in Finder
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+$ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show Path bar in Finder
-defaults write com.apple.finder ShowPathbar -bool true
+$ defaults write com.apple.finder ShowPathbar -bool true
 
 # Show Status bar in Finder
-defaults write com.apple.finder ShowStatusBar -bool true
+$ defaults write com.apple.finder ShowStatusBar -bool true
 
 # Enable text copying from Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool YES
+$ defaults write com.apple.finder QLEnableTextSelection -bool YES
 
 # Show absolute path in finder's title bar. 
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+$ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # Use current directory as default search scope in Finder
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+$ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
  
 # Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+$ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+$ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable automatic rearrangement of spaces based on most recent usage
-defaults write com.apple.dock mru-spaces -bool false
+$ defaults write com.apple.dock mru-spaces -bool false
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: icnv, Nlmv, Flwv
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlmv"
+$ defaults write com.apple.finder FXPreferredViewStyle -string "Nlmv"
 
 
 ###############################################################################
@@ -90,13 +90,13 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlmv"
 ###############################################################################
 
 # Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+$ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+$ defaults write com.apple.Safari IncludeDevelopMenu -bool true
+$ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+$ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+$ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 
 
@@ -151,12 +151,12 @@ $ brew cask install suspicious-package
 
 ```bash
 # Node
-brew install node
+$ brew install node
 ```
 
 ```bash
 # Bonus
-npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
+$ npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
 ```
 
 ## Git
@@ -183,8 +183,19 @@ Enfin, assurer vous que Git est correctement installé grâce à `git --version`
 ```bash
 $ git config --global user.name "Full Name"
 $ git config --global user.email "Email"
+
+# Colorization
 $ git config --global color.ui true
+
 $ git config --global core.pager cat
+
+# Equivalent of --abbrev-commit for git log
+$ git config --global log.abbrevCommit true
+
+# Enable ERE (Extended Regular Expressions)
+$ git config --global grep.extendedRegexp true
+
+
 ```
 
 ### Editor
@@ -200,32 +211,33 @@ $ git config --global core.editor "subl -n -w"
 ### Alias
 
 ```bash
-# Les alias basic
-st = status -sb
-br = branch -vv -a
-branch = branch -vv
-co = checkout
-cob = checkout -b
-ci = commit
-fetchall = fetch --all --tag
-
-# Log
-tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
-lg = log --pretty=oneline --abbrev-commit
-who = shortlog -sne
-
-# Annuler le dernier commit
-undo = git reset --soft HEAD^
-
-# diff
-dic = diff --cached
-diffstat = diff --stat
-
-# Editer le dernier commit
-amend = commit --amend
-
-# Show url remote
-remoteurl = remote -v
+[alias]
+  # Les alias basic
+  st = status -sb
+  br = branch -vv -a
+  branch = branch -vv
+  co = checkout
+  cob = checkout -b
+  ci = commit
+  fetchall = fetch --all --tag
+  
+  # Log
+  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
+  lg = log --pretty=oneline --abbrev-commit
+  who = shortlog -sne
+  
+  # Annuler le dernier commit
+  undo = git reset --soft HEAD^
+  
+  # diff
+  dic = diff --cached
+  diffstat = diff --stat
+  
+  # Editer le dernier commit
+  amend = commit --amend
+  
+  # Show url remote
+  remoteurl = remote -v
 ```
 
 ### Ajout de fichier
