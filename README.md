@@ -24,6 +24,8 @@
     - [Intellij](#intellij)
       - [Saut de ligne](#saut-de-ligne)
       - [Import inutile](#import-inutile)
+- [JavaScript](#javascript)
+  - [JavaScript Tutorial](#javascript-tutorial)
 
 
 ## OS X
@@ -329,3 +331,10 @@ com.google.api.client.repackaged
 com.google.api.client.util
 com.google.appengine.repackaged
 ```
+
+## JavaScript
+
+## JavaScript Tutorial
+
+* (HTML5Rocks) [JS debugging asynchronous with Chrome DevTools](http://www.html5rocks.com/fr/tutorials/developertools/async-call-stack/)  
+* (HTML5Rocks) [JavaScript Promises](http://www.html5rocks.com/fr/tutorials/es6/promises/)  
