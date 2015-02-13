@@ -2,8 +2,6 @@
 
 ## Summary
 
-- [Java tools](#java-tools)
-  - [Template](#template)
 - [OS X](#os-x)
   - [Preferences](#os-x-preferences)
   - [Install](#install)
@@ -16,20 +14,16 @@
   - [Rewriting history](#rewriting-history)
     - [Fixup and Autosquash](#fixup-and-autosquash)
   - [Best script for Git](#best-script-for-git)
-- [Styleguide Java](#styleguide-java)
-  - [Enum](#enum)
-  - [toString and get](#tostring-and-get)
-  - [Optimisation](#optimisation)
-  - [Intellij](#intellij)
-    - [Saut de ligne](#saut-de-ligne)
-    - [Import inutile](#import-inutile)
-
-
-## Java Tools
-### Template
-
-* [Velocity](http://velocity.apache.org/engine/devel/developer-guide.html)  
-Moteur de template pour document ou mail
+- [Java](#java)
+  - [Java tools](#java-tools)
+    - [Template](#template)
+  - [Styleguide Java](#styleguide-java)
+    - [Enum](#enum)
+    - [toString and get](#tostring-and-get)
+    - [Optimisation](#optimisation)
+    - [Intellij](#intellij)
+      - [Saut de ligne](#saut-de-ligne)
+      - [Import inutile](#import-inutile)
 
 
 ## OS X
@@ -268,14 +262,22 @@ A list of cool features of Git and GitHub.
 * [sickill/git-dude](https://github.com/sickill/git-dude)  
 git-dude is a simple git desktop notifier. It monitors git repositories in current directory for new commits/branches/tags and shows desktop notification if anything new arrived.
 
+## Java
 
-## Styleguide Java
-### Enum
+### Java Tools
+#### Template
+
+* [Velocity](http://velocity.apache.org/engine/devel/developer-guide.html)  
+Moteur de template pour document ou mail
+
+
+### Styleguide Java
+#### Enum
 
 * Le nom d'une enum doit-être écrit en PascalCase
 * Aucun `s` a la fin du nom d'un Enum
 
-### toString and get
+#### toString and get
 
 Le toString doit être utilisé seulement dans le cas ou l'on souhaite avoir `(String) Enum`
 
@@ -308,17 +310,17 @@ class ExempleEnum {
 }
 ```
 
-### Optimisation
+#### Optimisation
 
 Éviter d'utiliser `Arrays.asList(...)` car possède des fluites mémoires.
 
-### Intellij
-#### Saut de ligne
+#### Intellij
+##### Saut de ligne
 
 Afin d'ajouter un saut de ligne à vos fichier automatiquement :  
 `IDE Settings / Editor` et sélectionner `Ensure line feed at file end on saving`
 
-#### Import inutile
+##### Import inutile
 
 Dans la plupart des cas, il y a des imports que l'on va ne va utiliser. Dans "Settings/Auto Import", ajouter ceci à la liste des exclusions :
 
