@@ -13,7 +13,7 @@
   - [Ajout de fichier](#ajout-de-fichier)
   - [Rewriting history](#rewriting-history)
     - [Fixup and Autosquash](#fixup-and-autosquash)
-  - [Best script for Git](#best-script-for-git)
+  - [Best tool or script for Git](#best-tool-or-script-for-git)
 - [Java](#java)
   - [Java tools](#java-tools)
     - [Template](#template)
