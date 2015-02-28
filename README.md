@@ -5,6 +5,7 @@
 - [OS X](#os-x)
   - [Preferences](#os-x-preferences)
   - [Install](#install)
+  - [iterm2](#iterm2)
 - [Git](#git)
   - [Installation](#installation)
   - [Configuration](#configuration)
@@ -158,6 +159,13 @@ $ brew install node
 # Bonus
 $ npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
 ```
+
+### iterm2
+
+Download and install [iTerm2](http://iterm2.com/).   
+Load preferences from this Github depot. In **iTerm > Preferences**, under the tab General, and paste in **Load preferences from a custom folder or URL** with this url :  
+*https://raw.githubusercontent.com/ctesniere/trick/master/iterm/com.googlecode.iterm2.plist*
+
 
 ## Git
 ### Installation
