@@ -1,0 +1,49 @@
+[core]
+	excludesfile = /Users/ctesniere/.gitignore_global
+	editor = subl -n -w
+	whitespace = nowarn
+[user]
+	name = Cedric TESNIERE
+	email = tesniere.cedric@gmail.com
+[pull]
+	rebase = true
+[push]
+	default = nothing
+[color]
+	status = true
+	diff = true
+	ui = true
+[credential]
+	helper = osxkeychain
+[alias]
+	st = status -sb
+	br = branch -vv -a
+	branch = branch -vv
+	co = checkout
+	cob = checkout -b
+	ci = commit
+	fetchall = fetch --all --tag --prune
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
+	lg = log --pretty=oneline --abbrev-commit
+	who = shortlog -sne
+	undo = git reset --soft HEAD^
+	dic = diff --cached
+	diffstat = diff --stat
+	amend = commit --amend
+	remoteurl = remote -v
+	k = !gitk --all&
+
+	# Find branches containing commit
+	fb = "!f() { git branch -a --contains $1; }; f"
+
+	# Find tags containing commit
+	ft = "!f() { git describe --always --contains $1; }; f"
+
+	# Find commits by source code
+	fcs = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+	# Find commits by commit message
+	fmsg = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --no-merges --grep=$1; }; f"
+	
+	# Interactive rebase with the given number of latest commits
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
