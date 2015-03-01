@@ -2,6 +2,7 @@
 
 ## Summary
 
+- [Installing](#installing)
 - [OS X](#os-x)
   - [Preferences](#os-x-preferences)
   - [Install](#install)
@@ -30,6 +31,14 @@
 - [JavaScript](#javascript)
   - [JavaScript Tutorial](#javascript-tutorial)
 
+
+## Installing
+
+```
+$ git clone git@github.com:ctesniere/mac-osx-dev-setup.git ~/.mac-osx-dev-setup
+```
+
+And create symlinks for files dotfile (show explanation below)
 
 ## OS X
 
@@ -290,8 +299,8 @@ Git extensions to provide high-level repository operations.
 #### Added configuration
 
 ```
-$ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/inspection/Default.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/inspection/Default.xml
-$ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/codestyles/Perso.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
+$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/inspection/Default.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/inspection/Default.xml
+$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/codestyles/Perso.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
 ```
 
 #### Saut de ligne
