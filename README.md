@@ -339,6 +339,13 @@ class ExempleEnum {
 Éviter d'utiliser `Arrays.asList(...)` car possède des fluites mémoires.
 
 #### Intellij
+##### Added configuration
+
+```
+$ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/inspection/Default.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/inspection/Default.xml
+$ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/codestyles/Perso.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
+```
+
 ##### Saut de ligne
 
 Afin d'ajouter un saut de ligne à vos fichier automatiquement :  
