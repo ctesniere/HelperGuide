@@ -5,7 +5,6 @@
 - [OS X](#os-x)
   - [Preferences](#os-x-preferences)
   - [Install](#install)
-- [iterm2](#iterm2)
 - [Git](#git)
   - [Installation](#installation)
   - [Configuration](#configuration)
@@ -15,9 +14,12 @@
   - [Rewriting history](#rewriting-history)
     - [Fixup and Autosquash](#fixup-and-autosquash)
   - [Best tool or script for Git](#best-tool-or-script-for-git)
-- [Intellij](#intellij)
-  - [Saut de ligne](#saut-de-ligne)
-  - [Import inutile](#import-inutile)
+- [Application](#application)
+  - [Intellij](#intellij)
+    - [Saut de ligne](#saut-de-ligne)
+    - [Import inutile](#import-inutile)
+  - [iterm2](#iterm2)
+  - [Spectacle](#spectacle)
 - [Java](#java)
   - [Java tools](#java-tools)
     - [Template](#template)
@@ -160,12 +162,6 @@ $ brew install node
 $ npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
 ```
 
-## iterm2
-
-Download and install [iTerm2](http://iterm2.com/).   
-Load preferences from this Github depot. In **iTerm > Preferences**, under the tab General, and paste in **Load preferences from a custom folder or URL** with this url :  
-*https://raw.githubusercontent.com/ctesniere/trick/master/iterm/com.googlecode.iterm2.plist*
-
 
 ## Git
 ### Installation
@@ -287,20 +283,23 @@ git-dude is a simple git desktop notifier. It monitors git repositories in curre
 Git extensions to provide high-level repository operations.
 
 
-## Intellij
-### Added configuration
+
+## Application
+
+### Intellij
+#### Added configuration
 
 ```
 $ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/inspection/Default.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/inspection/Default.xml
 $ ln -s ~/Documents/workspace/trick/jetbrains/IntelliJIdea13/codestyles/Perso.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
 ```
 
-### Saut de ligne
+#### Saut de ligne
 
 Afin d'ajouter un saut de ligne à vos fichier automatiquement :  
 `IDE Settings / Editor` et sélectionner `Ensure line feed at file end on saving`
 
-### Import inutile
+#### Import inutile
 
 Dans la plupart des cas, il y a des imports que l'on va ne va utiliser. Dans "Settings/Auto Import", ajouter ceci à la liste des exclusions :
 
@@ -309,6 +308,18 @@ com.google.api.client.repackaged
 com.google.api.client.util
 com.google.appengine.repackaged
 ```
+
+
+### iterm2
+
+Download and install [iTerm2](http://iterm2.com/).   
+Load preferences from this Github depot. In **iTerm > Preferences**, under the tab General, and paste in **Load preferences from a custom folder or URL** with this url :  
+*https://raw.githubusercontent.com/ctesniere/trick/master/iterm/com.googlecode.iterm2.plist*
+
+
+### Spectacle
+
+Move and resize windows with ease. Download [spectacleapp](http://spectacleapp.com/).
 
 
 ## Java
