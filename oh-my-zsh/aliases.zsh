@@ -1,1 +1,1 @@
-alias to.trick=~/Documents/workspace/trick
+alias to.macOsxDevSetup=~/.mac-osx-dev-setup
