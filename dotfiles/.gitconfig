@@ -20,7 +20,6 @@
 	stqtus = status -sb
 	## diff between HEAD local and remote, ex : git new | git new origin/master
 	new = !sh -c 'git log --stat $1@{1}..$1@{0} "$@"'
-	unchecked
 
 	# branch
 	br = branch -vv -a
@@ -46,9 +45,9 @@
 	# Rewriting history
 	amend = commit --amend
 	fixup = "!sh -c '(git diff-files --quiet ||  (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1' -"
-	rh = "!git reset --hard $1"
+	rh = "!f() { git reset --hard $1; }; f"
 	## Interactive rebase with the given number of latest commits
-	reb = "!r() { git rebase -i HEAD~$1; }; r"
+	reb = "!f() { git rebase -i HEAD~$1; }; f"
 
 	# Gitk
 	k = !gitk --all&
