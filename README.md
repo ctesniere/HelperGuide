@@ -299,8 +299,8 @@ Git extensions to provide high-level repository operations.
 #### Added configuration
 
 ```
-$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/inspection/Default.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/inspection/Default.xml
-$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/codestyles/Perso.xml /Users/ctesniere/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
+$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/inspection/Default.xml ~/Library/Preferences/IntelliJIdea13/inspection/Default.xml
+$ ln -s ~/.mac-osx-dev-setup/jetbrains/IntelliJIdea13/codestyles/Perso.xml ~/Library/Preferences/IntelliJIdea13/codestyles/Perso.xml
 ```
 
 #### Saut de ligne

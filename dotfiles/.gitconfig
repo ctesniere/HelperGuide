@@ -1,10 +1,9 @@
-[core]
-	excludesfile = /Users/ctesniere/.gitignore_global
-	editor = subl -n -w
-	whitespace = nowarn
 [user]
 	name = Cedric TESNIERE
 	email = tesniere.cedric@gmail.com
+[core]
+	excludesfile = "~/.gitignore_global"
+	editor = subl -n -w
 [pull]
 	rebase = true
 [push]

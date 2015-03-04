@@ -6014,7 +6014,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/Documents/workspace/trick/iterm</string>
+	<string>~/.mac-osx-dev-setup/iterm/</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
