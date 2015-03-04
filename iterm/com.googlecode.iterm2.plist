@@ -5431,8 +5431,8 @@
 	<false/>
 	<key>MinimumContrast</key>
 	<real>0.0</real>
-	<key>NSColorPanelMode</key>
-	<string>7</string>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents/workspace/trick/iterm</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -5474,10 +5474,16 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>885 163 445 274 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>516 392 924 485 0 0 1440 877 </string>
+	<string>441 1360 924 485 160 900 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1440 873 0 0 1440 877 </string>
+	<string>160 1392 570 506 160 900 1280 1001 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>721 485 570 376 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>204 45 570 451 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -5943,7 +5949,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.040741421282291412</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -6032,7 +6038,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-02-28T16:48:16Z</date>
+	<date>2015-03-02T10:52:18Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
