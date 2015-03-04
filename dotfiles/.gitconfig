@@ -12,24 +12,37 @@
 	status = true
 	diff = true
 	ui = true
-[credential]
-	helper = osxkeychain
+[log]
+	abbrevCommit = true
 [alias]
+	# status
 	st = status -sb
+	stqtus = status -sb
+
+	# branch
 	br = branch -vv -a
-	branch = branch -vv
 	co = checkout
 	cob = checkout -b
-	ci = commit
+
+	# check
 	fetchall = fetch --all --tag --prune
+
+	# Log
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
 	lg = log --pretty=oneline --abbrev-commit
 	who = shortlog -sne
-	undo = git reset --soft HEAD^
 	dic = diff --cached
 	diffstat = diff --stat
+
+	# Annuler le dernier commit
+	undo = git reset --soft HEAD^
+
+	# Commit
+	ci = commit
 	amend = commit --amend
-	remoteurl = remote -v
+	fixup = "!sh -c '(git diff-files --quiet || (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1' -"
+	
+	# Gitk
 	k = !gitk --all&
 
 	# Find branches containing commit
@@ -46,3 +59,13 @@
 	
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
+[credential]
+	helper = osxkeychain
+[rerere]
+	enabled = true
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[grep]
+	extendedRegexp = true
