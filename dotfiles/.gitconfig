@@ -23,15 +23,15 @@
 
 	# branch
 	br = branch -vv -a
-	co = checkout
-	cob = checkout -b
+	co = "!f() { git checkout $1 && mvn clean; }; f"
+	cob = "!f() { git checkout -b $1 && mvn clean; }; f"
 
 	# check
 	fetchall = fetch --all --tag --prune
 
 	# Log
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
-	lg = log --pretty=oneline --abbrev-commit
+	lg = log --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s'
 	who = shortlog -sne
 	dic = diff --cached
 	diffstat = diff --stat
@@ -48,6 +48,8 @@
 	rh = "!f() { git reset --hard $1; }; f"
 	## Interactive rebase with the given number of latest commits
 	reb = "!f() { git rebase -i HEAD~$1; }; f"
+	rebconti = rebase --continue
+	rebabort = rebase --abort
 
 	# Gitk
 	k = !gitk --all&
@@ -62,7 +64,11 @@
 	## Find commits by commit message
 	fmsg = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --no-merges --grep=$1; }; f"
 	## Search commits by author
-	whois = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --author=\"$1\"; }; f"
+	fauthor = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --author=\"$1\"; }; f"
+
+	# Other
+	## Launch test for all commits, todo : dectect maven, gradle, ...
+	rebtest = "!f() { git rebase -i --exec 'mvn clean test' $1; }; f"
 
 [credential]
 	helper = osxkeychain
