@@ -30,7 +30,7 @@
 	fetchall = fetch --all --tag --prune
 
 	# Log
-	l = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(auto)%d%Creset %s %Cgreen(%an)%Creset' --date=short
+	l = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
 	who = shortlog -sne
 	dic = diff --cached
 	diffstat = diff --stat
