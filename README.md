@@ -171,6 +171,13 @@ $ brew install node
 $ npm install --global osx-trash # https://github.com/sindresorhus/node-osx-trash
 ```
 
+```bash
+# jenv
+$ brew install jenv
+$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(jenv init -)"' >> ~/.zshrc
+$ jenv enable-plugin maven
+```
 
 ## Git
 ### Installation
