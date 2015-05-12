@@ -340,50 +340,6 @@ Move and resize windows with ease. Download [spectacleapp](http://spectacleapp.c
 Moteur de template pour document ou mail
 
 
-### Styleguide Java
-#### Enum
-
-* Le nom d'une enum doit-être écrit en PascalCase
-* Aucun `s` a la fin du nom d'un Enum
-
-#### toString and get
-
-Le toString doit être utilisé seulement dans le cas ou l'on souhaite avoir `(String) Enum`
-
-Le get doit être utilisé seulement quand c'est une valeur qui ne correspond pas a `(String) Enum`
-
-Exemple :
-
-```java
-class ExempleEnum {
-
-  public enum Region {
-    EUROPE("e"),
-    US("s");
-
-    private String name = "";
-
-    Region(String name) {
-      this.name = name;
-    }
-
-    public String get() {
-      return name;
-    }
-  }
-
-  public void value(Region region) {
-    region.toString(); // retourne "EUROPE"
-    region.get(); // retourne "s"
-  }
-}
-```
-
-#### Optimisation
-
-Éviter d'utiliser `Arrays.asList(...)` car possède des fluites mémoires.
-
-
 ## JavaScript
 
 ## JavaScript Tutorial
