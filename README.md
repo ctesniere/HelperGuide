@@ -96,6 +96,8 @@ $ defaults write com.apple.dock mru-spaces -bool false
 # Four-letter codes for the other view modes: icnv, Nlmv, Flwv
 $ defaults write com.apple.finder FXPreferredViewStyle -string "Nlmv"
 
+# AirDrop by ethernet
+$ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1 
 
 ###############################################################################
 # Safari & WebKit                                                             #
