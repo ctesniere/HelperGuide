@@ -28,6 +28,8 @@
     - [Enum](#enum)
     - [toString and get](#tostring-and-get)
     - [Optimisation](#optimisation)
+- [Android](#android)
+  - [Android Tools](#android-tools)
 - [JavaScript](#javascript)
   - [JavaScript Tutorial](#javascript-tutorial)
 
@@ -348,6 +350,11 @@ Move and resize windows with ease. Download [spectacleapp](http://spectacleapp.c
 * [Velocity](http://velocity.apache.org/engine/devel/developer-guide.html)  
 Moteur de template pour document ou mail
 
+## Android
+### Android Tools
+
+* [Android Studio](https://developer.android.com/sdk/index.html) The official Android IDE
+* [Genymotion](https://www.genymotion.com/) Genymotion is a fast and easy-to-use Android emulator to run and test your Android apps. AOSP-based for perfect Android compliance, 20 pre-configured devices, CPU and OpenGL acceleration, etc.
 
 ## JavaScript
 
