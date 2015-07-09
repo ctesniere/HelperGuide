@@ -4,16 +4,20 @@
 [core]
 	excludesfile = "~/.gitignore_global"
 	editor = subl -n -w
+	autocrlf = input # Prevent line ending issues
+	compression = 9 
 [pull]
 	rebase = true
 [push]
-	default = nothing
+	default = current
 [color]
 	status = true
 	diff = true
 	ui = true
 [log]
 	abbrevCommit = true
+[rebase]
+	autosquash = true
 [alias]
 	# status
 	st = status -sb
@@ -26,8 +30,9 @@
 	co = "!f() { git checkout $1 && mvn clean; }; f"
 	cob = "!f() { git checkout -b $1 && mvn clean; }; f"
 
-	# check
+	# check & refresh
 	fetchall = fetch --all --tag --prune
+	refreshDev = !git co dev && git pull common dev && git push origin dev
 
 	# Log
 	l = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
@@ -54,7 +59,7 @@
 	k = !gitk --all&
 
 	# Search
-	## Find branches containing commit
+	## Find branches containing sha1 commit
 	fb = "!f() { git branch -a --contains $1; }; f"
 	## Find tags containing commit
 	ft = "!f() { git describe --always --contains $1; }; f"
@@ -68,6 +73,7 @@
 	# Other
 	## Launch test for all commits, todo : dectect maven, gradle, ...
 	rebtest = "!f() { git rebase -i --exec 'mvn clean test' $1; }; f"
+	clean = !git clean -df
 
 [credential]
 	helper = osxkeychain
