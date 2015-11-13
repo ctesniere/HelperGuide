@@ -17,7 +17,13 @@
 [log]
 	abbrevCommit = true
 [rebase]
-	autosquash = true
+	autoStash = true
+[credential]
+	helper = osxkeychain
+[rerere]
+	enabled = true
+[grep]
+	extendedRegexp = true
 [alias]
 	# status
 	st = status -sb
@@ -32,13 +38,14 @@
 
 	# check & refresh
 	fetchall = fetch --all --tag --prune
-	refreshDev = !git co dev && git pull common dev && git push origin dev
+	refresh = "!f() { git checkout $1 && git pull common $1 && git push origin $1; }; f"
+	refreshDev = !git checkout develop && git pull common develop && git push origin develop
 
 	# Log
 	l = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
 	who = shortlog -sne
-	dic = diff --cached
-	diffstat = diff --stat
+	diffc = diff --cached
+	diffs = diff --stat
 
 	# Annuler le dernier commit
 	undo = git reset --soft HEAD^
@@ -48,7 +55,7 @@
 	
 	# Rewriting history
 	amend = commit --amend
-	fixup = "!sh -c '(git diff-files --quiet ||  (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1' -"
+	fixup = "!sh -c 'COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
 	rh = "!f() { git reset --hard $1; }; f"
 	## Interactive rebase with the given number of latest commits
 	reb = "!f() { git rebase -i HEAD~$1; }; f"
@@ -74,14 +81,7 @@
 	## Launch test for all commits, todo : dectect maven, gradle, ...
 	rebtest = "!f() { git rebase -i --exec 'mvn clean test' $1; }; f"
 	clean = !git clean -df
-
-[credential]
-	helper = osxkeychain
-[rerere]
-	enabled = true
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-[grep]
-	extendedRegexp = true
