@@ -11,15 +11,13 @@
 [push]
 	default = current
 [color]
-	status = true
-	diff = true
-	ui = true
+	ui = always
 [log]
 	abbrevCommit = true
 [rebase]
 	autoStash = true
 [credential]
-	helper = osxkeychain
+	helper = store
 [rerere]
 	enabled = true
 [grep]
@@ -27,22 +25,21 @@
 [alias]
 	# status
 	st = status -sb
-	stqtus = status -sb
 	## diff between HEAD local and remote, ex : git new | git new origin/master
 	new = !sh -c 'git log --stat $1@{1}..$1@{0} "$@"'
 
 	# branch
 	br = branch -vv -a
-	co = "!f() { git checkout $1 && mvn clean; }; f"
-	cob = "!f() { git checkout -b $1 && mvn clean; }; f"
+	co = checkout
+	cob = checkout -b
 
 	# check & refresh
 	fetchall = fetch --all --tag --prune
 	refresh = "!f() { git checkout $1 && git pull common $1 && git push origin $1; }; f"
-	refreshDev = !git checkout develop && git pull common develop && git push origin develop
 
 	# Log
-	l = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
+	l = log --date-order --date=iso --graph --full-history --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
+	ll = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
 	who = shortlog -sne
 	diffc = diff --cached
 	diffs = diff --stat
@@ -52,7 +49,7 @@
 
 	# Commit
 	ci = commit
-	
+
 	# Rewriting history
 	amend = commit --amend
 	fixup = "!sh -c 'COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
@@ -63,7 +60,8 @@
 	rebabort = rebase --abort
 
 	# Gitk
-	k = !gitk --all&
+	k = !gitk&
+	kll = !gitk --all&
 
 	# Search
 	## Find branches containing sha1 commit
