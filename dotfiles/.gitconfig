@@ -58,6 +58,7 @@
 	reb = "!f() { git rebase -i HEAD~$1; }; f"
 	rebconti = rebase --continue
 	rebabort = rebase --abort
+	rebdevelop = rebase -i develop
 
 	# Gitk
 	k = !gitk&
@@ -83,3 +84,6 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
