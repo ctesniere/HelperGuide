@@ -30,6 +30,7 @@
 
 	# branch
 	br = branch -vv -a
+	brDF = "!f() { git branch -D $1 && for r in $(git remote); do git push $r :$1; done; }; f"
 	co = checkout
 	cob = checkout -b
 
