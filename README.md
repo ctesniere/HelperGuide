@@ -7,13 +7,6 @@
   - [Preferences](#os-x-preferences)
   - [Install](#install)
 - [Git](#git)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Editor](#editor)
-  - [Alias](#alias)
-  - [Ajout de fichier](#ajout-de-fichier)
-  - [Rewriting history](#rewriting-history)
-    - [Fixup and Autosquash](#fixup-and-autosquash)
   - [Best tool or script for Git](#best-tool-or-script-for-git)
 - [Application](#application)
   - [Intellij](#intellij)
@@ -184,111 +177,6 @@ $ jenv enable-plugin maven
 ```
 
 ## Git
-### Installation
-
-Avec Homebrew, l'installation de Git est très simple et simplifie les mises à jour :
-
-```bash
-$ brew update
-$ brew install git
-```
-
-Pour s'assurer que tous fonctionnent correctement, utiliser la commande `$ brew doctor`.
-Si vous avez cette erreur `Warning: /usr/bin occurs before /usr/local/bin`, executer cette commande :
-
-```bash
-$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-```
-
-Enfin, assurer vous que Git est correctement installé grâce à `git --version`
-
-### Configuration
-
-```bash
-$ git config --global user.name "Full Name"
-$ git config --global user.email "Email"
-
-# Colorization
-$ git config --global color.ui true
-
-$ git config --global core.pager cat
-
-# Equivalent of --abbrev-commit for git log
-$ git config --global log.abbrevCommit true
-
-# Enable ERE (Extended Regular Expressions)
-$ git config --global grep.extendedRegexp true
-
-
-```
-
-### Editor
-
-Vous pouvez configurer l'éditeur de texte par défaut qui sera utilisé par Git si vous avez besoin d'écrire un message ou lors d'un rebase.
-
-```bash
-# Prerequisite : have Sublime Text 2
-$ sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin
-$ git config --global core.editor "subl -n -w"
-```
-
-### Alias
-
-```bash
-[alias]
-  # Les alias basic
-  st = status -sb
-  br = branch -vv -a
-  branch = branch -vv
-  co = checkout
-  cob = checkout -b
-  ci = commit
-  fetchall = fetch --all --tag
-  
-  # Log
-  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --date=short
-  lg = log --pretty=oneline --abbrev-commit
-  who = shortlog -sne
-  
-  # Annuler le dernier commit
-  undo = git reset --soft HEAD^
-  
-  # diff
-  dic = diff --cached
-  diffstat = diff --stat
-  
-  # Editer le dernier commit
-  amend = commit --amend
-  
-  # Show url remote
-  remoteurl = remote -v
-```
-
-### Ajout de fichier
-
-`git add .` - Ajout tous les fichiers unstaged  
-`git add -p` - Choisir les bouts de code à staged
-`git reset HEAD file` - Unstaged le fichier
-
-### Rewriting history
-
-#### Fixup and Autosquash
-
-Si un oublie se presente dans un précédente commit, par exemple 4c8f450, exécutez la commande suivante après que vous avez modifié le problème :
-
-`git commit --fixup=4c8f450`
-
-Un alias très utile :
-
-```bash
-[alias]
-  fixup = "!sh -c '(git diff-files --quiet || \
-    (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && \
-    COMMIT=$(git rev-parse $1) && \
-    git commit --fixup=$COMMIT && \
-    git rebase -i --autosquash $COMMIT~1' -"
-```
-
 ### Best tool or script for Git
 
 * [k4rthik/git-cal](https://github.com/k4rthik/git-cal)  
@@ -303,7 +191,6 @@ git-dude is a simple git desktop notifier. It monitors git repositories in curre
 Git extensions to provide high-level repository operations.
 * [git-up/GitUp](https://github.com/git-up/GitUp)  
 The Git interface you've been missing all your life has finally arrived. http://gitup.co
-
 
 
 ## Application
