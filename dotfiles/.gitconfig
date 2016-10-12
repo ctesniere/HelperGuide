@@ -41,6 +41,7 @@
 	# Log
 	l = log --date-order --date=iso --graph --full-history --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
 	ll = log --date-order --date=iso --graph --full-history --all --pretty=format:'%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset) %C(auto)%d %C(reset)%s'
+	llOnlybranchAndTag = !sh -c 'git ll --simplify-by-decoration'
 	who = shortlog -sne
 	diffc = diff --cached
 	diffs = diff --stat
